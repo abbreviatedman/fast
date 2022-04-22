@@ -1,11 +1,9 @@
-# Some Slides
+<!-- .slide: class="splash-page" -->
+
+# Vim As A Language
+
+## A Demonstration Of
+
+## Efficient Editing
 
 ---
-
-## Slide 2
-
-Content goes here.
-
----
-
-## Slide 3
