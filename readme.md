@@ -62,7 +62,7 @@ Headings using this framework are in most ways just like regular Markdown headin
 - The highest-level heading should be reserved for splash pages (see more on splash pages below). The top-level heading style is designed for that purpose and takes up too much of the slide to allow much other content.
 - Heading relationships follow the Pursuit style guide, with the biggest heading on a slide in black and all caps, and any subheadings on a slide using yellow, title-cased text. Fonts have been customized for them as well.
 
-#### Adding A Splash Page
+#### Splash Pages
 
 A splash page is meant to separate sections of your presentation. A splash page typically contains a heading and a background image, though a still image (or GIF) is a great addition.
 
