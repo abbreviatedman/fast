@@ -23,6 +23,9 @@ Markdown is well documented at [https://www.markdownguide.org/](https://www.mark
 
 ### Special Features Of Markdown Using This Framework
 
+TODO add screenshots
+TODO add hosted version of a slide deck about FAST
+
 Regular Markdown is great for standard web documents, but web _presentations_ are a specific use case. This repository's framework provides additional syntax to make that easier by leveraging the [reveal-md] tool and customizing it with some additional features and defaults.
 
 #### Separating Slides
@@ -76,11 +79,11 @@ There is currently only one built-in background image. You can use it by adding 
 
 #### Bullet List Fragments
 
-Documentation coming soon.
+TODO Documentation for Bullet List Fragments
 
 #### Speaker Notes
 
-Documentation coming soon.
+TODO Documentation for Speaker Notes
 
 ## Styling
 
@@ -94,11 +97,11 @@ Overriding the style is _not_ recommended. Maintaining stylistic consistency bot
 ### Dark Mode
 
 TODO add Dark Mode
-TODO add configuration for Dark Mode
+TODO add documentation for Dark Mode
 
 ### Overriding The Style
 
-TODO add configuration for Overriding The Style
+TODO add documentation for Overriding The Style
 
 ## Hosting
 
