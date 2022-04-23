@@ -10,7 +10,7 @@
 
 ## What We'll Cover
 
-<!-- .slide: class="one-at-a-time-list" -->
+<!-- .slide: class="incremental-list" -->
 
 - What Vim Even Is.
 - What's Special About Vim.
@@ -21,10 +21,11 @@
 
 ---
 
-## What We Won't Cover
+## Getting The Most Out Of Today
 
-- The entirety of Vim the editing language.
-- Vim the terminal application.
+- This talk will expose you to Vim and get you some practice. Don't expect to actually learn Vim today!
+- You can code along, but if you fall behind, don't try to catch up. There are no assignments. Don't panic.
+- We'll take breaks and switch exercises often, so you can start always start fresh with the next file.
 
 ---
 
@@ -33,6 +34,10 @@
 Nothing. But Vim users eventually all become this guy:
 
 ![young man looking agitated at a school desk with the caption, "When it's been 10 minutes since you told somebody you use vim"](./assets/vim.jpg)<!-- .element: class="fragment" -->
+
+So that's me now.<!-- .element: class="fragment" -->
+
+Sorry.<!-- .element: class="fragment" -->
 
 ---
 
