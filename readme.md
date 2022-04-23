@@ -6,6 +6,12 @@ This is the repository for the Framework for Authoring Styled Talks, a [Pursuit]
 
 Decks can be easily written with Markdown, come with a Pursuit stylesheet and brand assets, and can be served locally or hosted for online access.
 
+## Example Talk
+
+See [an example talk on Vim](./index.md) for a run-through of some of FAST's features.
+
+TODO Host Vim talk when complete.
+
 ## Getting Up And Running
 
 - Create a new repository by clicking "Use this template" on [this GitHub repository](https://github.com/abbreviatedman/talks-template). Clone that new repo down to your local machine.
@@ -77,9 +83,78 @@ There is currently only one built-in background image. You can use it by adding 
 ---
 ```
 
-#### Bullet List Fragments
+#### Syntax Highlighting In Code Snippets
 
-TODO Documentation for Bullet List Fragments
+TODO Documentation for Syntax Highlighting In Code Snippets
+
+#### Revealing Items Incrementally
+
+The Reveal framework allows for a items to be revealed one at a time, so that as you "go to the next slide", you're actually just revealing the next part of the current slide. This is most often used for bullet lists, but can be used for anything in your slide—a list item, a heading, a picture, or any such thing.
+
+##### Setting Items To Be One-At-A-Time Granularly
+
+You can add this feature to any one-off item using the `class="fragment"` HTML comment, courtesy of the Reveal system. Keep in mind that **the lack of whitespace before the comment is necessary**. The comment needs to come _directly_ after the item it's referencing, without any spaces or carriage returns or whitespace of any kind.
+
+```md
+## Dinosaurs
+
+Wanna see one?
+
+![a Brachiosaur](https://www.rareresource.com/images/Brachiosaurus1-small.jpg)<!-- .element: class="fragment" -->
+
+---
+```
+
+When the above slide is first shown, it will appear without its image. When you cycle to what would be the next slide, the image will appear. The next time you "go to the next slide", it actually will.
+
+You can use this with bullet points, a typical use case:
+
+```md
+## Table of Contents
+
+- SQL Vs. NoSQL
+- What The Actual Is A Document?
+- Embedded Vs. Referenced Documents
+- CRUD Practice From The Shell<!-- .element: class="fragment" -->
+
+---
+```
+
+When the above slide is first shown, it will appear without its last bullet point. When you cycle to what would be the next slide, the last bullet point will appear.
+
+**This is not usually what you want**. (Though an extra surprise bullet point can be fun.) Instead, you usually would like _every_ bullet point in a list to appear one-by-one. The naive approach looks like this:
+
+```md
+## Table of Contents
+
+- SQL Vs. NoSQL<!-- .element: class="fragment" -->
+- What The Actual Is A Document?<!-- .element: class="fragment" -->
+- Embedded Vs. Referenced Documents<!-- .element: class="fragment" -->
+- CRUD Practice From The Shell<!-- .element: class="fragment" -->
+
+---
+```
+
+However, this is time-consuming and syntactically busy. (Exactly what Markdown is designed to avoid.) You likely want the next approach.
+
+##### Setting All Of A Slide's List Items To Be Incremental
+
+You can use FAST's `incremental-list` class to make a slide's whole list appear incrementally.
+
+```md
+## What We'll Cover
+
+<!-- .slide: class="incremental-list" -->
+
+- What Vim Even Is.
+- What's Special About Vim.
+- Who Vim Is For.
+- Getting Started With Vim.
+- Practice Time!
+- How To Actually Learn Vim.
+
+---
+```
 
 #### Speaker Notes
 
@@ -87,9 +162,9 @@ TODO Documentation for Speaker Notes
 
 ## Styling
 
-This repo contains a `style.css` file that provides a uniform Pursuit style for presentations. This section contains tips for:
+This framework's stylesheet provides a uniform Pursuit theme for presentations. This section contains tips for
 
-- changing to a dark palette,
+- changing to a dark palette
 - or overriding the default style.
 
 Overriding the style is _not_ recommended. Maintaining stylistic consistency both between your own presentations and between your presentations and the presentations of other instructors has many benefits from an audience experience standpoint. It's also far easier to focus on content than bike-shedding about style. This framework is meant to make it fast to bootstrap a presentation so that you can instead focus on the content.

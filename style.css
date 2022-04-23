@@ -1,3 +1,12 @@
+/* Applies to all slides. */
+.reveal {
+  font-size: 32px;
+}
+
+img {
+  text-align: center;
+}
+
 @font-face {
   font-family: heading;
   src: url(./assets/fonts/Rene\ Bieder\ -\ Galano\ Grotesque\ SemiBold.otf);
@@ -20,19 +29,39 @@
   background-size: cover;
 }
 
-section.splash-page {
-  background-image: initial;
+/* Biggest heading on a splash page. */
+.splash-page h1,
+.splash-page h2,
+.splash-page h3,
+.splash-page h4 {
+  color: #edff00;
+  text-shadow: none;
+  letter-spacing: normal;
+  font-family: heading;
+  text-transform: uppercase;
+  margin: 20px;
 }
 
-section {
-  font-size: 42px;
+/* Sub-headings on a splash page. */
+.splash-page h1 ~ h2,
+.splash-page h1 ~ h3,
+.splash-page h1 ~ h4,
+.splash-page h2 ~ h3,
+.splash-page h2 ~ h4,
+.splash-page h3 ~ h4 {
+  text-transform: capitalize;
+  font-family: subheading;
+  color: black;
+}
+
+section.splash-page {
+  background-image: initial;
 }
 
 ul {
   margin: 30px;
 }
 
-p,
 li {
   color: #1e1e1e;
   font-family: subheading;
@@ -40,16 +69,29 @@ li {
   text-align: left;
 }
 
+/* Biggest heading on a slide. */
 h1,
 h2,
 h3,
 h4 {
-  color: black;
+  color: #4242ea;
   text-shadow: none;
   letter-spacing: normal;
   font-family: heading;
   text-transform: uppercase;
   margin: 20px;
+}
+
+/* Sub-headings on a slide. */
+h1 ~ h2,
+h1 ~ h3,
+h1 ~ h4,
+h2 ~ h3,
+h2 ~ h4,
+h3 ~ h4 {
+  text-transform: capitalize;
+  font-family: subheading;
+  color: black;
 }
 
 h1 {
@@ -62,18 +104,6 @@ h2 {
 
 h3 {
   font-size: 1.3em;
-}
-
-/* This applies to all subheadings. */
-h1 ~ h2,
-h1 ~ h3,
-h1 ~ h4,
-h2 ~ h3,
-h2 ~ h4,
-h3 ~ h4 {
-  text-transform: capitalize;
-  font-family: subheading;
-  color: #edff00;
 }
 
 a {
