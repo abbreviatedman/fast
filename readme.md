@@ -6,11 +6,9 @@ This is the repository for the Framework for Authoring Styled Talks, a [Pursuit]
 
 Decks can be easily written with Markdown, come with a Pursuit stylesheet and brand assets, and can be served locally or hosted for online access.
 
-## Example Talk
+## Design Principles
 
-See [an example talk on Vim](./index.md) for a run-through of some of FAST's features.
-
-TODO Host Vim talk when complete.
+TODO Add design principles
 
 ## Getting Up And Running
 
@@ -18,6 +16,12 @@ TODO Host Vim talk when complete.
 - In your newly cloned repo, erase the contents of this readme, substituting your own if you want your own presentation repo documented. You do not have to include your own readme, but either way, **do not leave this readme in**. _Our_ repository is a framework for making presentations—yours _is_ a presentation.
 - Add your deck's content to [the presentation's markdown file](./index.md).
 - Serve the content locally by navigating to this repository's directory in your terminal and entering `npm start`.
+
+## Example Talk
+
+If you'd rather learn by looking at a pure example, you can see [the included example talk on Vim](./index.md) for a run-through of some of FAST's features.
+
+TODO Host Vim talk when complete.
 
 ## Authoring A Presentation Using FAST
 
@@ -160,18 +164,26 @@ You can use FAST's `incremental-list` class to make a slide's whole list appear 
 
 TODO Documentation for Speaker Notes
 
+#### Style Consistency
+
+TODO Document style at high level.
+
 ## Styling
 
-This framework's stylesheet provides a uniform Pursuit theme for presentations. This section contains tips for
+This framework's stylesheet provides a uniform Pursuit theme for presentations.
 
-- changing to a dark palette
-- or overriding the default style.
+This section contains:
+
+- what the style generally is,
+- how to change to a dark palette,
+- and how to override the default style.
 
 Overriding the style is _not_ recommended. Maintaining stylistic consistency both between your own presentations and between your presentations and the presentations of other instructors has many benefits from an audience experience standpoint. It's also far easier to focus on content than bike-shedding about style. This framework is meant to make it fast to bootstrap a presentation so that you can instead focus on the content.
 
 ### Dark Mode
 
 TODO add Dark Mode
+TODO add Dark Mode toggle
 TODO add documentation for Dark Mode
 
 ### Overriding The Style
