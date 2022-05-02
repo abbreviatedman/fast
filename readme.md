@@ -14,8 +14,10 @@ TODO Add design principles
 
 - Create a new repository by clicking "Use this template" on [this GitHub repository](https://github.com/abbreviatedman/talks-template). Clone that new repo down to your local machine.
 - In your newly cloned repo, erase the contents of this readme, substituting your own if you want your own presentation repo documented. You do not have to include your own readme, but either way, **do not leave this readme in**. _Our_ repository is a framework for making presentations—yours _is_ a presentation.
+- Install necessary libraries by navigating to this repository's directory in your terminal and entering `npm install`.
 - Add your deck's content to [the presentation's markdown file](./index.md).
-- Serve the content locally by navigating to this repository's directory in your terminal and entering `npm start`.
+- Open the deck in your browser by navigating to this repository's directory in your terminal and entering `npm start`.
+- As you edit the markdown file, the browser will reload with the latest saved version.
 
 ## Example Talk
 
@@ -29,7 +31,7 @@ TODO Host Vim talk when complete.
 
 Markdown is a lightweight markup language that enables you to write formatted content in a readable syntax.
 
-Markdown is well documented at [https://www.markdownguide.org/](https://www.markdownguide.org/) and elsewhere. For a quick start, check out [Markdown Guide's Basic Syntax section](https://www.markdownguide.org/basic-syntax/) or [the Markdown Cheat Sheet from Markdown Here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+Markdown is well documented at [The Markdown Guide](https://www.markdownguide.org/) and elsewhere. For a quick start, check out [Markdown Guide's Basic Syntax section](https://www.markdownguide.org/basic-syntax/) or [the Markdown Cheat Sheet from Markdown Here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 ### Special Features Of Markdown Using This Framework
 
@@ -93,11 +95,30 @@ TODO Documentation for Syntax Highlighting In Code Snippets
 
 #### Revealing Items Incrementally
 
-The Reveal framework allows for a items to be revealed one at a time, so that as you "go to the next slide", you're actually just revealing the next part of the current slide. This is most often used for bullet lists, but can be used for anything in your slide—a list item, a heading, a picture, or any such thing.
+The [reveal-js] framework allows for a items to be revealed one at a time, so that as you "go to the next slide", you're actually just revealing the next part of the current slide. This is most often used for bullet lists, but can be used for anything in your slide—a list item, a heading, a picture, or any such thing.
+
+##### Setting All Of A Slide's List Items To Be Incremental
+
+You can use FAST's `incremental-list` class to make a slide's whole list appear incrementally.
+
+```md
+## What We'll Cover
+
+<!-- .slide: class="incremental-list" -->
+
+- What Vim Even Is.
+- What's Special About Vim.
+- Who Vim Is For.
+- Getting Started With Vim.
+- Practice Time!
+- How To Actually Learn Vim.
+
+---
+```
 
 ##### Setting Items To Be One-At-A-Time Granularly
 
-You can add this feature to any one-off item using the `class="fragment"` HTML comment, courtesy of the Reveal system. Keep in mind that **the lack of whitespace before the comment is necessary**. The comment needs to come _directly_ after the item it's referencing, without any spaces or carriage returns or whitespace of any kind.
+You can add this feature to any one-off item using the `class="fragment"` HTML comment, courtesy of the [reveal-js] system. Keep in mind that **the lack of whitespace before the comment is necessary**. The comment needs to come _directly_ after the item it's referencing, without any spaces or carriage returns or whitespace of any kind.
 
 ```md
 ## Dinosaurs
@@ -139,26 +160,7 @@ When the above slide is first shown, it will appear without its last bullet poin
 ---
 ```
 
-However, this is time-consuming and syntactically busy. (Exactly what Markdown is designed to avoid.) You likely want the next approach.
-
-##### Setting All Of A Slide's List Items To Be Incremental
-
-You can use FAST's `incremental-list` class to make a slide's whole list appear incrementally.
-
-```md
-## What We'll Cover
-
-<!-- .slide: class="incremental-list" -->
-
-- What Vim Even Is.
-- What's Special About Vim.
-- Who Vim Is For.
-- Getting Started With Vim.
-- Practice Time!
-- How To Actually Learn Vim.
-
----
-```
+However, this is time-consuming and syntactically busy. (Exactly what Markdown is designed to avoid.) You likely want the `incremental-list` class outlined at the top of this section.
 
 #### Speaker Notes
 
@@ -192,17 +194,48 @@ TODO add documentation for Overriding The Style
 
 ## Hosting
 
+You can deploy your talk to the web through and share the URL with anyone through any number of means.
+
+This framework leverages [Surge] to deploy in 1 step from the command line.
+
+### If You Already Have A Surge Account
+
+If you already have a [Surge] account and are logged in on your machine, simply navigate to your deck's directory on the command line and enter `npm run deploy`. This will host your site at `http://[your git repo name].surge.sh`. For example, if when you created your repo you named it "fast-vim-talk", your url would now be `http://fast-vim-talk.surge.sh`.
+
+#### Custom Domains
+
+If you want to configure what the subdomain is, use `npm run surge` instead. This will prompt you for a domain name, which can be any unused subdomain, ending with `.surge.sh`. For example, if your repo name was `fast-vim-talk`, you could change it to host at `http://vim-talk.surge.sh` instead of the default `http://fast-vim-talk.surge.sh` by running `npm run surge` and entering "vim-talk.surge.sh" at the "domain" prompt.
+
+[Surge] has further documentation for deploying to your own domain name, such as `vim-talk.com`.
+
+### If You Do Not Have A Surge Account
+
+1. In the terminal, in any directory, run `npm install --global surge` to install the `surge` command throughout your system. If you get a permissions error, you may need to preface that command with `sudo` and a space, like so: `sudo npm install --global surge`.
+2. Run `surge login`. Despite its name, this can register a new account too. Simply enter a new email and password combination. This will be your `surge` password, so you should record it somewhere.
+
+Now you have a [Surge] account. Follow the steps under "If You Already Had A Surge Account" just above.
+
+### Deploying On A Different Platform
+
+To deploy somewhere else, simply run `npm run build`. This will create a directory called `_static`
+
 TODO add documentation on Hosting—maybe through `surge`? With an `npm build` that creates a static site with `reveal-md --static` and starts the `surge` process?
 
 ## Further Reading
 
-TODO add documentation on Further Reading
+You can read more about the tools FAST leverages at the following sites:
 
-Things to link to:
+- [reveal.js] is the underlying technology that converts HTML into slides.
+- [reveal-md] is a command-line tool to directly convert plain Markdown files into [reveal.js] slides.
+- Markdown is the syntax used for authoring these slides. We recommend the following resources for diving in further, in order from shallow dives to deep:
+  - [the Markdown Cheat Sheet from Markdown Here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+  - [Markdown Guide's Basic Syntax section](https://www.markdownguide.org/basic-syntax/)
+  - [Codeacademy's "What Is Markdown" Article and Video](https://www.codecademy.com/resources/blog/what-is-markdown/)
+  - [The Markdown Guide](https://www.markdownguide.org/) in its entirety.
+  - [Wikipedia's Markdown article](https://en.wikipedia.org/wiki/Markdown), for a dive as deep as you want to go.
+- [Surge] is the command-line tool we use for deployment.
 
-- `surge`
-- `reveal-md`
-- Markdown
-
+[reveal.js]: https://revealjs.com/
 [reveal-md]: https://github.com/webpro/reveal-md
 [pursuit]: https://www.pursuit.org/
+[surge]: https://surge.sh/
