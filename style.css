@@ -5,21 +5,21 @@
 
 @font-face {
   font-family: heading;
-  src: url(./assets/fonts/Rene\ Bieder\ -\ Galano\ Grotesque\ SemiBold.otf);
+  src: url(../assets/fonts/Rene\ Bieder\ -\ Galano\ Grotesque\ SemiBold.otf);
 }
 
 @font-face {
   font-family: subheading;
-  src: url(./assets/fonts/Graphik-Regular.otf);
+  src: url(../assets/fonts/Graphik-Regular.otf);
 }
 
 @font-face {
   font-family: code;
-  src: url(./assets/fonts/Roboto-Regular.ttf);
+  src: url(../assets/fonts/Roboto-Regular.ttf);
 }
 
 .splash-page {
-  background-image: url(assets/images/Pursuit\ Zoom\ Backgrounds-Wordmark.jpg);
+  background-image: url(../assets/images/Pursuit\ Zoom\ Backgrounds-Wordmark.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

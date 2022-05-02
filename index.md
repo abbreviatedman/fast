@@ -33,7 +33,7 @@
 
 _Nothing_. But Vim users eventually **all** become this guy:
 
-![young man looking agitated at a school desk with the caption, "When it's been 10 minutes since you told somebody you use vim"](./assets/vim.jpg)<!-- .element: class="fragment" -->
+![young man looking agitated at a school desk with the caption, "When it's been 10 minutes since you told somebody you use vim"](assets/images/vim.jpg)<!-- .element: class="fragment" -->
 
 So that's me now.<!-- .element: class="fragment" -->
 
