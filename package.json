@@ -207,8 +207,8 @@
     "start": "./node_modules/reveal-md/bin/reveal-md.js index.md -w --theme white --css style.css --scripts script.js --highlight-theme github",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "./node_modules/reveal-md/bin/reveal-md.js index.md -w --static --static-dirs=assets --theme white --css style.css --scripts script.js --highlight-theme github",
-    "deploy": "npm run build && cd _static &&  surge . $npm_package_name.surge.sh",
-    "check-env": "node -e 'console.log(process.env)' | grep npm"
+    "surge": "npm run build && cd _static &&  surge . $npm_config_name.surge.sh",
+    "deploy": "npm run surge --name=`printf '%s\n' \"${PWD##*/}\"`"
   },
   "repository": {
     "type": "git",
