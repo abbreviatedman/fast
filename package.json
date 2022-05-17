@@ -207,8 +207,12 @@
     "start": "./node_modules/reveal-md/bin/reveal-md.js index.md -w --theme ./style.css --scripts script.js --highlight-theme github",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "./node_modules/reveal-md/bin/reveal-md.js index.md -w --static --static-dirs=assets --theme white --css style.css --scripts script.js --highlight-theme github",
-    "surge": "npm run build && cd _static &&  surge . $npm_config_name.surge.sh",
-    "deploy": "npm run surge --name=`printf '%s\n' \"${PWD##*/}\"`"
+    "prep-deploy": "npm run build && cd _static",
+    "upload": "surge . $npm_config_name.surge.sh",
+    "upload-custom-domain": "surge .",
+    "deploy": "npm run prep-deploy && npm run upload --name=`printf '%s\n' \"${PWD##*/}\"`",
+    "deploy-custom-domain": "npm run prep-deploy && npm run upload-custom-domain",
+    "dcd": "npm run deploy-custom-domain"
   },
   "repository": {
     "type": "git",
