@@ -211,11 +211,11 @@ Now you have a [Surge] account. Follow the steps under "If You Already Had A Sur
 
 ### Deploying Custom Domains With FAST
 
-TODO update documentation for deploying custom subdomains to include new npm scripts (see `package.json` in the meantime)
+Normally, when you deploy using `npm run deploy`, your subdomain is your repo name. In the example above, if you named your repo "fast-vim-talk", `npm run deploy` would deploy your deck to `fast-vim-talk.surge.sh`.
 
-If you want to configure what the subdomain is, use `npm run surge` instead. This will prompt you for a domain name, which can be any unused subdomain, ending with `.surge.sh`. For example, if your repo name was `fast-vim-talk`, you could change it to host at `http://vim-talk.surge.sh` instead of the default `http://fast-vim-talk.surge.sh` by running `npm run surge` and entering "vim-talk.surge.sh" at the "domain" prompt.
+You can customize that subdomain using `npm run deploy-custom-domain` (or `npm run dcd` as a shorthand). This prompts you to type a custom domain name in. In the example above, if you realized you named your repo "fast-vim-talk", in a reference to the FAST framework, but that the viewer of your deck didn't care that it was made with this repository (and might even be confused, given that a Vim talk is typically anything but fast), using `npm run deploy-custom-domain`, you could type "vim-talk.surge.sh" at the prompt to deploy to that URL instead.
 
-[Surge] has further documentation for deploying to your own domain name, such as `vim-talk.com`.
+[Surge] has further documentation for deploying to your own domain name, such as `vim-talk.com`. Once set up with the domain, you would use `npm run deploy-custom-domain` as outlined above, typing your custom domain at the prompt.
 
 ### Deploying On A Different Platform
 
