@@ -13,12 +13,13 @@ TODO Add design principles
 ## Getting Up And Running
 
 - Create a new repository by clicking "Use this template" on [this GitHub repository](https://github.com/abbreviatedman/talks-template). Clone that new repo down to your local machine.
-- In your newly cloned repo, erase the contents of this readme, substituting your own if you want your own presentation repo documented. You do not have to include your own readme, but either way, **do not leave this readme in**. _Our_ repository is a framework for making presentations—yours _is_ a presentation.
 - Install necessary libraries by navigating to this repository's directory in your terminal and entering `npm install`.
-- Add your deck's content to [the presentation's markdown file](./index.md).
+- Add your deck's content to [the presentation's markdown file](./index.md), `index.md`.
 - Open the deck in your browser by navigating to this repository's directory in your terminal and entering `npm start`.
-- As you edit the markdown file, the browser will reload with the latest saved version.
-- Highly recommended: use Git to add, commit, and push regularly. Don't lose your deck!
+- As you edit the markdown file, the browser will automatically reload with the latest saved version.
+- Share your browser window with your deck's audience!
+- Highly recommended: use Git to add, commit, and push regularly. Don't lose your deck.
+- If you _do_ push with Git, erase the contents of this readme, substituting your own documentation if you wish. You do not have to include your own readme, but either way, **do not leave this readme in**. _Our_ repository is a framework for making presentations—yours _is_ a presentation.
 
 ## Authoring A Presentation Using FAST
 
