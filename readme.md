@@ -97,7 +97,7 @@ The [reveal-js] framework allows for a items to be revealed one at a time, so th
 
 ##### Setting All Of A Slide's List Items To Be Incremental
 
-You can use FAST's `incremental-list` style directive to make a slide's whole list appear incrementally.
+You can use FAST's `incremental-list` Style Directive to make a slide's whole list appear incrementally.
 
 ```md
 ## What We'll Cover
@@ -116,7 +116,7 @@ You can use FAST's `incremental-list` style directive to make a slide's whole li
 
 ##### Setting Items To Be One-At-A-Time Granularly
 
-You can add this feature to any one-off item using the `class="fragment"` style directive, courtesy of the [reveal-js] system. Keep in mind that **the lack of whitespace before the comment is necessary**. The comment needs to come _directly_ after the item it's referencing, without any spaces or carriage returns or whitespace of any kind.
+You can add this feature to any one-off item using the `class="fragment"` Style Directive, courtesy of the [reveal-js] system. Keep in mind that **the lack of whitespace before the comment is necessary**. The comment needs to come _directly_ after the item it's referencing, without any spaces or carriage returns or whitespace of any kind.
 
 ```md
 ## Dinosaurs
