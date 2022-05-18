@@ -18,6 +18,7 @@ TODO Add design principles
 - Add your deck's content to [the presentation's markdown file](./index.md).
 - Open the deck in your browser by navigating to this repository's directory in your terminal and entering `npm start`.
 - As you edit the markdown file, the browser will reload with the latest saved version.
+- Highly recommended: use Git to add, commit, and push regularly. Don't lose your deck!
 
 ## Authoring A Presentation Using FAST
 
@@ -35,8 +36,8 @@ Markdown is well documented at [The Markdown Guide](https://www.markdownguide.or
 
 ### Special Features Of Markdown Using This Framework
 
-TODO add screenshots
-TODO add hosted version of a slide deck about FAST
+- TODO add screenshots
+- TODO add hosted version of a slide deck about FAST
 
 Regular Markdown is great for standard web documents, but web _presentations_ are a specific use case. This repository's framework provides additional syntax to make that easier by leveraging the [reveal-md] tool and customizing it with some additional features and defaults.
 
@@ -184,9 +185,9 @@ Overriding the style is _not_ recommended. Maintaining stylistic consistency bot
 
 ### Dark Mode
 
-TODO add Dark Mode
-TODO add Dark Mode toggle
-TODO add documentation for Dark Mode
+- TODO add Dark Mode
+- TODO add Dark Mode toggle
+- TODO add documentation for Dark Mode
 
 ### Overriding The Style
 
