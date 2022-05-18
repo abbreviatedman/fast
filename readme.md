@@ -76,7 +76,7 @@ Headings using this framework are in most ways just like regular Markdown headin
 
 A splash page is meant to separate sections of your presentation. A splash page typically contains a heading and a background image, though a still image (or GIF) is a great addition.
 
-There is currently only one built-in background image. You can use it via one of FAST's style directives, HTML comments containing a directive for how to style the current slide.
+There is currently only one built-in background image. You can use it via one of FAST's Style Directives—HTML comments containing directions for how to style the current slide.
 
 ```md
 ---
