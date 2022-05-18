@@ -202,6 +202,12 @@ If you already have a [Surge] account and are logged in on your machine, simply 
 
 ### If You Do Not Have A Surge Account
 
+#### Using Ours
+
+TODO add Pursuit surge account, with script
+
+#### Getting Your Own Surge Account
+
 1. In the terminal, in any directory, run `npm install --global surge` to install the `surge` command throughout your system. If you get a permissions error, you may need to preface that command with `sudo` and a space, like so: `sudo npm install --global surge`.
 2. Run `surge login`. Despite its name, this can register a new account too. Simply enter a new email and password combination. This will be your `surge` password, so you should record it somewhere.
 
