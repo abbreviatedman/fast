@@ -242,7 +242,7 @@ To deploy somewhere else, simply run `npm run build`. This will create a directo
 
 ## Further Reading
 
-You can read more about the tools FAST leverages at the following sites:
+You can read more about the tools FAST leverages at the following sites.
 
 - [reveal.js] is the underlying technology that converts HTML into slides.
 - [reveal-md] is a command-line tool to directly convert plain Markdown files into [reveal.js] slides.
