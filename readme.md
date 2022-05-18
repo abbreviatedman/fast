@@ -19,13 +19,13 @@ TODO Add design principles
 - Open the deck in your browser by navigating to this repository's directory in your terminal and entering `npm start`.
 - As you edit the markdown file, the browser will reload with the latest saved version.
 
-## Example Talk
+## Authoring A Presentation Using FAST
+
+### Example Talk
 
 If you'd rather learn by looking at a pure example, you can see [the included example talk on Vim](./index.md) for a run-through of some of FAST's features.
 
 TODO Host Vim talk when complete.
-
-## Authoring A Presentation Using FAST
 
 ### The Basics Of Markdown
 
@@ -78,11 +78,11 @@ Headings using this framework are in most ways just like regular Markdown headin
 
 A splash page is meant to separate sections of your presentation. A splash page typically contains a heading and a background image, though a still image (or GIF) is a great addition.
 
-There is currently only one built-in background image. You can use it by adding a special class to the slide with an HTML comment.
+There is currently only one built-in background image. You can use it via one of FAST's style directives, HTML comments containing a directive for how to style the current slide.
 
 ```md
 ---
-<!-- .slide: class="splash-page" -->
+<!-- splash-page -->
 ## function expressions vs. "fat arrows"
 
 ### the eternal debate
@@ -99,12 +99,12 @@ The [reveal-js] framework allows for a items to be revealed one at a time, so th
 
 ##### Setting All Of A Slide's List Items To Be Incremental
 
-You can use FAST's `incremental-list` class to make a slide's whole list appear incrementally.
+You can use FAST's `incremental-list` style directive to make a slide's whole list appear incrementally.
 
 ```md
 ## What We'll Cover
 
-<!-- .slide: class="incremental-list" -->
+<!-- incremental-list -->
 
 - What Vim Even Is.
 - What's Special About Vim.
@@ -118,7 +118,7 @@ You can use FAST's `incremental-list` class to make a slide's whole list appear 
 
 ##### Setting Items To Be One-At-A-Time Granularly
 
-You can add this feature to any one-off item using the `class="fragment"` HTML comment, courtesy of the [reveal-js] system. Keep in mind that **the lack of whitespace before the comment is necessary**. The comment needs to come _directly_ after the item it's referencing, without any spaces or carriage returns or whitespace of any kind.
+You can add this feature to any one-off item using the `class="fragment"` style directive, courtesy of the [reveal-js] system. Keep in mind that **the lack of whitespace before the comment is necessary**. The comment needs to come _directly_ after the item it's referencing, without any spaces or carriage returns or whitespace of any kind.
 
 ```md
 ## Dinosaurs
@@ -160,7 +160,7 @@ When the above slide is first shown, it will appear without its last bullet poin
 ---
 ```
 
-However, this is time-consuming and syntactically busy. (Exactly what Markdown is designed to avoid.) You likely want the `incremental-list` class outlined at the top of this section.
+However, this is time-consuming and syntactically busy. (Exactly what Markdown is designed to avoid.) You likely want the `incremental-list` style directive outlined at the top of this section.
 
 #### Speaker Notes
 
@@ -202,12 +202,6 @@ This framework leverages [Surge] to deploy in 1 step from the command line.
 
 If you already have a [Surge] account and are logged in on your machine, simply navigate to your deck's directory on the command line and enter `npm run deploy`. This will host your site at `http://[your git repo name].surge.sh`. For example, if when you created your repo you named it "fast-vim-talk", your url would now be `http://fast-vim-talk.surge.sh`.
 
-#### Custom Domains
-
-If you want to configure what the subdomain is, use `npm run surge` instead. This will prompt you for a domain name, which can be any unused subdomain, ending with `.surge.sh`. For example, if your repo name was `fast-vim-talk`, you could change it to host at `http://vim-talk.surge.sh` instead of the default `http://fast-vim-talk.surge.sh` by running `npm run surge` and entering "vim-talk.surge.sh" at the "domain" prompt.
-
-[Surge] has further documentation for deploying to your own domain name, such as `vim-talk.com`.
-
 ### If You Do Not Have A Surge Account
 
 1. In the terminal, in any directory, run `npm install --global surge` to install the `surge` command throughout your system. If you get a permissions error, you may need to preface that command with `sudo` and a space, like so: `sudo npm install --global surge`.
@@ -215,11 +209,17 @@ If you want to configure what the subdomain is, use `npm run surge` instead. Thi
 
 Now you have a [Surge] account. Follow the steps under "If You Already Had A Surge Account" just above.
 
+### Deploying Custom Domains With FAST
+
+TODO update documentation for deploying custom subdomains to include new npm scripts (see `package.json` in the meantime)
+
+If you want to configure what the subdomain is, use `npm run surge` instead. This will prompt you for a domain name, which can be any unused subdomain, ending with `.surge.sh`. For example, if your repo name was `fast-vim-talk`, you could change it to host at `http://vim-talk.surge.sh` instead of the default `http://fast-vim-talk.surge.sh` by running `npm run surge` and entering "vim-talk.surge.sh" at the "domain" prompt.
+
+[Surge] has further documentation for deploying to your own domain name, such as `vim-talk.com`.
+
 ### Deploying On A Different Platform
 
-To deploy somewhere else, simply run `npm run build`. This will create a directory called `_static`
-
-TODO add documentation on Hosting—maybe through `surge`? With an `npm build` that creates a static site with `reveal-md --static` and starts the `surge` process?
+To deploy somewhere else, simply run `npm run build`. This will create a directory called `_static`. Deploy that folder using a deployment platform of your choice.
 
 ## Further Reading
 
