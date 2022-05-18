@@ -1,11 +1,10 @@
-window.addEventListener("load", function () {
-  const comments = getAllComments();
-  console.log(comments);
-  comments.forEach(handleComment);
+window.addEventListener("load", () => {
+  const directives = getAllDirectives();
+  directives.forEach(handleDirective);
 });
 
-// Gets all styling comments in deck.
-const getAllComments = () => {
+// Gets all styling directives in deck.
+const getAllDirectives = () => {
   const slides = Array.from(document.querySelectorAll(".slides section"));
   const elements = slides.reduce(
     (elements, slide) => [...elements, ...slide.childNodes],
@@ -14,14 +13,14 @@ const getAllComments = () => {
 
   return elements
     .filter((element) => element.nodeType === Node.COMMENT_NODE)
-    .map((comment) => ({
-      slide: comment.parentNode,
-      comment: comment.nodeValue.trim(),
+    .map((directive) => ({
+      slide: directive.parentNode,
+      directive: directive.nodeValue.trim(),
     }));
 };
 
-const handleComment = ({ slide, comment }) => {
-  switch (comment) {
+const handleDirective = ({ slide, directive }) => {
+  switch (directive) {
     case "incremental-list":
       makeListItemsIncremental(slide);
       break;
@@ -44,8 +43,8 @@ const makeListItemsIncremental = (slide) =>
 const makeSplashPage = (slide) => {
   slide.classList.add("splash-page");
   // add splash-page class to background div as well
-  document.querySelectorAll("section").forEach((slideCandidate, i) => {
-    if (slideCandidate === slide) {
+  document.querySelectorAll("section").forEach((candidate, i) => {
+    if (candidate === slide) {
       document
         .querySelector(".backgrounds")
         .childNodes[i].classList.add("splash-page");
