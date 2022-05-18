@@ -235,10 +235,10 @@ To deploy somewhere else, simply run `npm run build`. This will create a directo
 
 ## Design Principles For FAST
 
-- Convention over configuration. The headings, splash pages, and fonts are already styled, deployment and sharing are automated as much as possible, . The point is to focus on content, not styling or deployment or sharing.
+- Convention over configuration. The headings, splash pages, and fonts are already styled, deployment and sharing are automated as much as possible, and there is only one Markdown flavor supported. The point is to focus on content, not styling or deployment or sharing.
 - Leverage what's already there. [reveal-js], [reveal-md], [GitHub], and [surge] are doing the heavy lifting, so we can glue it all together with a cohesive and configuration-free design. And this documentation, while extensive, cannot and does not need to cover those libraries.
 - Consistent, simple, and user-friendly interface. All serving and deployment is run through NPM scripts, even in cases where the Bash commands are fairly routine. All changes to how the user writes markdown (chiefly the Style Directive system) are as straightforward, intuitive, and forgiving as possible.
-- Listen to users. This has started as a project for, "What would I have wanted 3 years ago," but I am _not_ the only target audience anymore.
+- Listen to users. This has started as a project to give myself the deck authoring experience I want, but I am _not_ the only target audience anymore.
 
 ## Further Reading
 
