@@ -30,6 +30,14 @@ const handleDirective = ({ slide, directive }) => {
 
       break;
 
+    // TODO
+    case "incremental-item":
+      break;
+
+    // TODO
+    case "center":
+      break;
+
     default:
       break;
   }
