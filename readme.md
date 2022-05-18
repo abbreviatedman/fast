@@ -1,4 +1,4 @@
-# FAST
+# FAST - The Framework For Authoring Styled Talks
 
 ## Introduction
 
