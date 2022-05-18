@@ -210,7 +210,11 @@
     "upload": "cd _static && surge . $npm_config_name.surge.sh",
     "deploy": "npm run build && npm run upload --name=`printf '%s\n' \"${PWD##*/}\"`",
     "deploy-custom-domain": "npm run build && cd _static && surge .",
-    "dcd": "npm run deploy-custom-domain"
+    "dcd": "npm run deploy-custom-domain",
+    "save-custom-domain": "mkdir -p _static && cd _static && node ../save-custom-domain.js",
+    "scd": "npm run save-custom-domain",
+    "remove-custom-domain": "mkdir -p _static && cd _static && node ../remove-custom-domain.js",
+    "rcd": "npm run remove-custom-domain"
   },
   "repository": {
     "type": "git",

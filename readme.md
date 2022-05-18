@@ -215,7 +215,15 @@ Normally, when you deploy using `npm run deploy`, your subdomain is your repo na
 
 You can customize that subdomain using `npm run deploy-custom-domain` (or `npm run dcd` as a shorthand). This prompts you to type a custom domain name in. In the example above, if you realized you named your repo "fast-vim-talk", in a reference to the FAST framework, but that the viewer of your deck didn't care that it was made with this repository (and might even be confused, given that a Vim talk is typically anything but fast), using `npm run deploy-custom-domain`, you could type "vim-talk.surge.sh" at the prompt to deploy to that URL instead.
 
-[Surge] has further documentation for deploying to your own domain name, such as `vim-talk.com`. Once set up with the domain, you would use `npm run deploy-custom-domain` as outlined above, typing your custom domain at the prompt.
+Unless you go the extra step of securing a domain name for your talk, your custom domain _must_ end with `.surge.sh`. [Surge] has further documentation for deploying to your own domain name, such as `vim-talk.com`. Once set up with a custom top-level domain ("TLD"), you would use `npm run deploy-custom-domain` as outlined above, typing your custom TLD at the prompt.
+
+#### Saving Your Custom Domain Name
+
+Running `npm run deploy-custom-domain` prompts you for the domain name every time. When using a custom domain name, saving the domain name to a file is far preferable. There are two helper scripts included to make that easier.
+
+1. `npm run save-custom-domain [custom domain]` (or `npm run scd [custom domain]` as a shorthand) will save your domain name in a file stored in `_static/CNAME`, which will be read by the `npm run deploy-custom-domain` script. So you can write `npm run save-custom-domain vim-talk.surge.sh`, and from then on `npm run deploy-custom-domain` will read from that file and deploy to that domain name without prompting you for a domain to deploy to.
+
+2. To change custom domain names, use `npm run remove-custom-domain` (or `npm run rcd` as a shorthand). This will remove the text from the CNAME file, and `npm run deploy-custom-domain` will once again prompt you for a name.
 
 ### Deploying On A Different Platform
 
