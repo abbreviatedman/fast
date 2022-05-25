@@ -4,9 +4,8 @@ if (process.argv[2]) {
   console.log(
     "There's no need to include which domain name to remove, as only one domain can be saved. Just writing `npm run remove-custom-domain` is all you need."
   );
-  console.log(
-    "\nBut it's just wasted typing! Removing your custom domain name now."
-  );
+
+  console.log("\nRemoving your custom domain name now.");
 }
 
 fs.writeFile("./CNAME", "", (error) => {
@@ -17,6 +16,6 @@ fs.writeFile("./CNAME", "", (error) => {
   }
 
   console.log(
-    `Any saved domains have been removed from the CNAME file. To save a domain name, use npm run save-custom-domain`
+    `Any saved domains have been removed from the CNAME file. To save a new domain name, use npm run save-custom-domain`
   );
 });
