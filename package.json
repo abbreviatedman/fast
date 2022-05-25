@@ -218,13 +218,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abbreviatedman/talks-template.git"
+    "url": "git+https://github.com/abbreviatedman/fast.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/abbreviatedman/talks-template/issues"
+    "url": "https://github.com/abbreviatedman/fast/issues"
   },
-  "homepage": "https://github.com/abbreviatedman/talks-template#readme"
+  "homepage": "https://github.com/abbreviatedman/fast#readme"
 }
